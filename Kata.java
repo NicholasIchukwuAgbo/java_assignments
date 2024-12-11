@@ -19,13 +19,11 @@ public class Kata{
 
 	}
 
-
-	public static int positiveDifference(int a, int b){
+	public static int positiveDifference (int a, int b){
 
 	return Math.abs(a - b);
 	}
 	 
-
 	public static boolean isPalindrome(int number){
 
 	int count = number;
@@ -36,7 +34,7 @@ public class Kata{
  
 	int leftout = number;
 
-	backward =backward * 10 + leftout;
+	backward = backward * 10 + leftout;
 
 	number /= 10;
 
