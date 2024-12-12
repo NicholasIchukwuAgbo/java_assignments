@@ -37,9 +37,6 @@ public class TwoLargestNum{
   	System.out.println("Second Largest Number is: " + secondLargest);
 
    }
-  
-
-  
 
 
 }
