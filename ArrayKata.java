@@ -1,10 +1,6 @@
-     import java.util.*;
-
 public class ArrayKata{
 
 	public static void main(String[] args){
-	
-	ArrayKata array = new ArrayKata();
       
 	int[] arrayList = {1000, 1500, 2000, 2500, 3000, 3500, 40, 4500, 5000, 6000};
 
