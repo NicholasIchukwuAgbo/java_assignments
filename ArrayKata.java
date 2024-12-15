@@ -2,7 +2,7 @@ public class ArrayKata{
 
 	public static void main(String[] args){
       
-	int[] arrayList = {1000, 1500, 2000, 2500, 3000, 3500, 40, 4500, 5000, 6000};
+	int[] arrayList = {1000, 1500, 2000, 2500, 3000, 20000, 40, 4500, 5000, 6000};
 
        	System.out.println("max: " + max(arrayList));
 
