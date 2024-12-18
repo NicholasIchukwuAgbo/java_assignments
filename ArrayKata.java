@@ -124,7 +124,7 @@ public class ArrayKata{
 
     }
 
-   return evenNumber++;
+   return evenNumber;
 
    }
 
@@ -143,7 +143,7 @@ public class ArrayKata{
 
     }
 
-   return oddNumber++;
+   return oddNumber;
 
     }
 
