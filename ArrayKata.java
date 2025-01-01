@@ -1,26 +1,5 @@
 public class ArrayKata{
 
-	public static void main(String[] args){
-      
-	int[] arrayList = {1003, 1500, 2000, 2500, 30001, 20000, 47, 4500, 5000, 6000};
-
-       	System.out.println("max: " + max(arrayList));
-
-	System.out.println("Min: " + min(arrayList));
-
-	System.out.println("Sum: " + sum(arrayList));
-
-	System.out.println("Sum Of Even: " + even(arrayList));
-
-	System.out.println("Sum Of odd: " + odd(arrayList));
-
-	System.out.println("Number Of Even: " + evenNumber(arrayList));
-
-	System.out.println("Number Of Odd: " + oddNumber(arrayList));
-
-   }
-
-
     public static int max(int[] arrayList) {
 
        int max = arrayList[0];
@@ -146,6 +125,28 @@ public class ArrayKata{
    return oddNumber;
 
     }
+
+
+
+	public static void main(String[] args){
+      
+	int[] arrayList = {1003, 1500, 2000, 2500, 30001, 20000, 47, 4500, 5000, 6000};
+
+       	System.out.println("max: " + max(arrayList));
+
+	System.out.println("Min: " + min(arrayList));
+
+	System.out.println("Sum: " + sum(arrayList));
+
+	System.out.println("Sum Of Even: " + even(arrayList));
+
+	System.out.println("Sum Of odd: " + odd(arrayList));
+
+	System.out.println("Number Of Even: " + evenNumber(arrayList));
+
+	System.out.println("Number Of Odd: " + oddNumber(arrayList));
+
+     }
 
 
    }

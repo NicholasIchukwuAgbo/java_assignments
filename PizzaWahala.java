@@ -61,7 +61,7 @@ public class PizzaWahala{
 
 	}
 	
-	int boxes = (int) Math.ceil((double) numberOfGuests / slicePerBox);
+	int boxes =  (int) Math.ceil((double) numberOfGuests / slicePerBox);
 
 	System.out.println("Number of Boxes: " + boxes + " Boxes");
 

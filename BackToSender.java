@@ -6,7 +6,7 @@ public class BackToSender{
 
 int basePay = 5000;
 
-int wages = 0;
+int wages = 0; 
 
 if (riderSuccessfulDelivery < 50){
 

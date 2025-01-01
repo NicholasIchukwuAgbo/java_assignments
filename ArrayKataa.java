@@ -1,4 +1,4 @@
-public class ArrayKataa{
+ public class ArrayKataa{
 
 	public static void main(String[] args){
 
