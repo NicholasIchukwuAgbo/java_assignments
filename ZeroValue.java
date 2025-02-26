@@ -1,4 +1,4 @@
-//NO: 4.15) (d)...
+
 public class ZeroValue{
 
 	public static void main(String[] args){

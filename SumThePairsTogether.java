@@ -10,7 +10,7 @@ public class SumThePairsTogether{
 
         System.out.print(num4 +"  ");
 
-        System.out.println(num4);
+        System.out.println(num8);
 
         int sum = num4 + num8;
 

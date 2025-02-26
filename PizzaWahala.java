@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class PizzaWahala{
 
@@ -6,9 +7,28 @@ public class PizzaWahala{
 
 	Scanner userInput = new Scanner(System.in);
 
+int numberOfGuests;
+int pizzaType = 0;
+
+  while (true){
+	try{
+	System.out.print("Enter number of guests: ");
+	numberOfGuests = userInput.nextInt();
+	break;
+	}catch(InputMismatchException e){
+	System.out.print("invalid Input, try again: ");
+	userInput.next();
+	}
+	}
+	
+	while(numberOfGuests < 1 || numberOfGuests > 100){
+	System.out.print("Invalid, try again (min 1, max 100): ");
+	numberOfGuests = userInput.nextInt();
+	}
+
 	System.out.println(""" 
 	
-	Below is our price list Sir/Madam...
+	Below is our price list Sir/Ma'am.
 
 	Pizza Type | Number of Slices | Price Per Box
 	----------------------------------------------
@@ -22,13 +42,21 @@ public class PizzaWahala{
 					     
 	""");
 
+while (true){
+	try{
 	System.out.print("Enter pizza type from the list above: ");
+	pizzaType = userInput.nextInt();
+	break;
+	}catch (InputMismatchException e){
+	System.out.print("invalid, try again: ");
+	userInput.next();
+	}
+	}
 
-	int pizzaType = userInput.nextInt();
-
-	System.out.print("Enter number of guests: ");
-
-	int numberOfGuests = userInput.nextInt();
+	while(pizzaType < 1 || pizzaType > 4){
+	System.out.print("Invalid, choose(1-4): ");
+	pizzaType = userInput.nextInt();
+	}
 
 	int pricePerBox = 0;
 
@@ -57,19 +85,20 @@ public class PizzaWahala{
 		break;
 
 	default:
-	 	System.out.print("Invalid choice, pls try again");
-
+	 	System.out.println("Invalid choice, pls try again");
+			break;
 	}
 	
 	int boxes =  (int) Math.ceil((double) numberOfGuests / slicePerBox);
 
-	System.out.println("Number of Boxes: " + boxes + " Boxes");
-
 	int leftoverSlice = boxes * slicePerBox - numberOfGuests;
 
-	System.out.println("Leftover Slice: " + leftoverSlice + " Slices" );
-
 	int totalCost = boxes * pricePerBox;
+
+
+	System.out.println("Number of Boxes: " + boxes + " Boxes");
+
+	System.out.println("Leftover Slice: " + leftoverSlice + " Slices" );
 	
 	System.out.println("Total Cost: " + totalCost + " Naira Only");
 

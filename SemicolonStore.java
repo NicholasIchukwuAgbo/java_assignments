@@ -9,7 +9,7 @@ public class SemicolonStore{
 	String optional = " ";
 	String goodsPurchase2 = " ";
 	int numberOfGoodsPurchase2 = 0;
-	double pricePerOne2 = 0;
+	double pricePerOne2 = 0; 
 	double total = 0;
 	double discount = 0;
 	double vat = 0;
@@ -19,7 +19,7 @@ public class SemicolonStore{
 	System.out.print("Customer's Name?: ");
 	String customerName = userInputCollection.next();
 
-	System.out.print("What did the customer buy?3: ");
+	System.out.print("What did the customer buy?: ");
 	String goodsPurchase = userInputCollection.next();
 
 	System.out.print("How many pieces?: ");
@@ -73,7 +73,7 @@ public class SemicolonStore{
 	
 	System.out.println("""
 	========================================================
-	   	ITEMS       QTY     PRICE      TOTAL(NGN)
+		ITEMS	QTY	PRICE	TOTAL(NGN)
 	--------------------------------------------------------
 	""");
 
@@ -82,9 +82,9 @@ public class SemicolonStore{
 	vat = total * 0.175;
 	totalBill = (total + vat) - discount;
 	
-	System.out.println("        " + goodsPurchase + "         " + numberOfGoodsPurchase + "         " + pricePerOne + "       " +  pricePerOne * 	numberOfGoodsPurchase);
+	System.out.println("\t" + goodsPurchase + "\t" + numberOfGoodsPurchase + "\t" + pricePerOne + "\t" + pricePerOne * numberOfGoodsPurchase);
 
-	System.out.println("        " + goodsPurchase2 + "         " + numberOfGoodsPurchase2 + "         " + pricePerOne2 + "       " +  pricePerOne2 * 	numberOfGoodsPurchase2);
+	System.out.println("\t" + goodsPurchase2 + "\t" + numberOfGoodsPurchase2 + "\t" + pricePerOne2 + "\t" + pricePerOne2 * numberOfGoodsPurchase2);
 
 	System.out.println("Sub Total: " + total );
 
@@ -94,7 +94,7 @@ public class SemicolonStore{
 
 	System.out.println("Bill Total: " + totalBill );
 
-	System.out.println("THIS IS NOT AN RECIEPT KINDLY PAY: " + totalBill);
+	System.out.println("THIS IS NOT A RECIEPT KINDLY PAY: " + totalBill);
 
 
 	System.out.print("How much did the customer give you?: ");
@@ -128,9 +128,9 @@ public class SemicolonStore{
 	totalBill = (total + vat) - discount;
 	balance = amountPaid - totalBill;
 	
-	System.out.println("        " + goodsPurchase + "         " + numberOfGoodsPurchase + "         " + pricePerOne + "       " +  pricePerOne * 	numberOfGoodsPurchase);
+	System.out.println("\t" + goodsPurchase + "\t" + numberOfGoodsPurchase + "\t" + pricePerOne + "\t" + pricePerOne * numberOfGoodsPurchase);
 
-	System.out.println("        " + goodsPurchase2 + "         " + numberOfGoodsPurchase2 + "         " + pricePerOne2 + "       " +  pricePerOne2 * 	numberOfGoodsPurchase2);
+	System.out.println("\t" + goodsPurchase2 + "\t" + numberOfGoodsPurchase2 + "\t" + pricePerOne2 + "\t" + pricePerOne2 * numberOfGoodsPurchase2);
 
 	System.out.println("Sub Total: " + total );
 
@@ -145,8 +145,6 @@ public class SemicolonStore{
 	System.out.println("Balance: " + balance );
 
 	System.out.println("THANK YOU FOR PATRONAGE");
-
-	//System.out.printf("%d%n%f%n%f%n%f%n%f%n%f%n", "total", "discount", "vat", "totalBill", "amountPaid", "balance");
 
 	}
 

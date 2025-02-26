@@ -1,4 +1,3 @@
-//N0: 4.23)
 import java.util.Scanner;
 
 public class TwoLargestNum{

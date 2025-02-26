@@ -1,4 +1,3 @@
-//NO: 4.18)
 import java.util.Scanner; 
 
 public class NewBalance{
