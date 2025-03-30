@@ -12,7 +12,7 @@ arrayList[counter] = number[number.length -counter -1];
 return arrayList;
 }
 
-public static void main(String... nicholas){
+public static void main(String[] args){
 
 int[] arrayElement = {1,2,3,4,5};
 

@@ -24,5 +24,5 @@ System.out.print(fat(5));
         System.out.println("$$$$$");
         System.out.println("&&&&&");*/
     }
-}	while True:
+}
 		

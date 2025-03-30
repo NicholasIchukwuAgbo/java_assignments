@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class CompoundInterestCalculator{
+public class CompoundInterestRate{
 
 	public static double compoundInterestRate(double principal, double 
 

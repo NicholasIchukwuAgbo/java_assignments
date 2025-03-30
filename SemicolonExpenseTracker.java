@@ -1,39 +1,38 @@
 import java.util.ArrayList;
 import java.util.InputMismatchException;
-import java.util.List;
 import java.util.Scanner;
 
 public class SemicolonExpenseTracker{
 
-    public static boolean isValidDate(String date) {
+    public static boolean getDate(String date){
 
         try {
 
-            java.time.LocalDate.parse(date, java.time.format.DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+            java.time.LocalDate.parse(date, java.time.format.DateTimeFormatter.ofPattern("yyyy/MM/dd"));
 
             return true;
 
-        } catch (java.time.format.DateTimeParseException e) {
+        } catch (java.time.format.DateTimeParseException e){
 
             return false;
         }
     }
 
-    public static boolean isValidDescription(String description) {
+    public static boolean getDescription(String description){
 
         return !description.trim().isEmpty();
     }
 
-    public static boolean isValidAmount(double amount) {
+    public static boolean getAmount(double amount){
 
         return amount >= 1;
     }
 
-    public static double calculateTotalExpenses(List<Double> amountHolder) {
+    public static double calculateTotalExpenses(ArrayList<Double> amountHolder){
 
         double total = 0;
 
-        for (Double amount : amountHolder) {
+        for (Double amount : amountHolder){
 
             total += amount;
 
@@ -42,17 +41,23 @@ public class SemicolonExpenseTracker{
         return total;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
 
-        List<String> dateHolder = new ArrayList<>();
+        ArrayList<String> dateHolder = new ArrayList<>();
 
-        List<String> descriptionHolder = new ArrayList<>();
+        ArrayList<String> descriptionHolder = new ArrayList<>();
 
-        List<Double> amountHolder = new ArrayList<>();
+        ArrayList<Double> amountHolder = new ArrayList<>();
+	
+	String date;
+	
+	String description;
+
+	double amount;
 
         Scanner userInputCollection = new Scanner(System.in);
 
-        while (true) {
+        while (true){
 
             System.out.println("\n1. Add an expense.");
 
@@ -70,7 +75,7 @@ public class SemicolonExpenseTracker{
 
                 userInputCollection.nextLine(); 
 
-                if (choice < 1 || choice > 4) {
+                if (choice < 1 || choice > 4){
 
                     System.out.println("Invalid choice. Please choose a valid option.");
 
@@ -78,18 +83,16 @@ public class SemicolonExpenseTracker{
                 }
 
 
-                switch (choice) {
+                switch (choice){
                     case 1:
 
-                        String date;
+                        while (true){
 
-                        while (true) {
-
-                            System.out.print("\nEnter the date (dd/MM/yyyy): ");
+                            System.out.print("\nEnter the date (yyyy/MM/dd): ");
 
                             date = userInputCollection.nextLine();
 
-                            if (isValidDate(date)) {
+                            if (getDate(date)){
 
                                 dateHolder.add(date);
 
@@ -97,20 +100,19 @@ public class SemicolonExpenseTracker{
 
                             } else {
 
-                                System.out.println("Invalid date format. Please use dd/MM/yyyy.");
+                                System.out.println("Invalid date format. Please use yyyy/MM/dd.");
 
                             }
                         }
 
-                        String description;
 
-                        while (true) {
+                        while (true){
 
                             System.out.print("Enter the description: ");
 
                             description = userInputCollection.nextLine();
 
-                            if (isValidDescription(description)) {
+                            if (getDescription(description)){
 
                                 descriptionHolder.add(description);
 
@@ -122,9 +124,8 @@ public class SemicolonExpenseTracker{
                             }
                         }
 
-                        double amount;
 
-                        while (true) {
+                        while (true){
 
                             try {
 
@@ -134,19 +135,20 @@ public class SemicolonExpenseTracker{
 
                                 userInputCollection.nextLine();
 
-                                if (isValidAmount(amount)) {
+                                if (getAmount(amount)){
 
                                     amountHolder.add(amount);
 
                                     break;
 
-                                } else {
+                                } else{
 
                                     System.out.println("Amount must be greater than or equal to 1.");
 
                                 }
 
-                            } catch (InputMismatchException e) {
+
+                            } catch (InputMismatchException e){
 
                                 System.out.println("Invalid input. Please enter a valid number.");
 
@@ -162,13 +164,13 @@ public class SemicolonExpenseTracker{
 
                         System.out.println("\n::::Expenses::::\n");
 
-                        if (dateHolder.isEmpty()) {
+                        if (dateHolder.isEmpty()){
 
                             System.out.println("No expense records yet..");
 
                         } else {
 
-                            for (int i = 0; i < dateHolder.size(); i++) {
+                            for (int i = 0; i < dateHolder.size(); i++){
 
                                 System.out.println((i + 1) + ". Date: " + dateHolder.get(i) + ", Description: " + descriptionHolder.get(i) + ", Amount: " + amountHolder.get(i));
                             }
@@ -180,11 +182,11 @@ public class SemicolonExpenseTracker{
 
                         double total = calculateTotalExpenses(amountHolder);
 
-                        if (amountHolder.isEmpty()) {
+                        if (amountHolder.isEmpty()){
 
                             System.out.println("No expenses to calculate.");
 
-                        } else {
+                        } else{
 
                             System.out.println("\nTotal Expenses: " + total);
 
@@ -197,12 +199,15 @@ public class SemicolonExpenseTracker{
 
                         return;
                 }
-            } catch (InputMismatchException e) {
+            } catch (InputMismatchException e){
 
                 System.out.println("Invalid input. Please enter a valid number.");
 
                 userInputCollection.nextLine();
-            }
+            
+		
+		}
+
         }
     }
 }

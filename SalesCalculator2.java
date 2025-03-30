@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class SalesCalculator{
+public class SalesCalculator2{
 	
 	public static void main(String[] args){
 
@@ -8,11 +8,9 @@ public class SalesCalculator{
 
 	System.out.println("Enter the number of total items sold");
 
-	double numberOfItems = userInput.nextDouble);
-	
-	double totalSales = 0;
+	double numberOfItems = userInput.nextDouble();
 
-	for(double count = 0; count < numberOfItems; count++){
+        for(double count = 0; count < numberOfItems; count++){
 
 	System.out.println("Enter the value of the total items " + (count + 1) );
 
@@ -20,13 +18,11 @@ public class SalesCalculator{
 
 	double itemsValue = userInput.nextDouble();
 
-	totalAmountSales = itemsVlaue;
-
-	double commission = 0.09*totalAmountSales;
+        double commission = 0.09*itemsValue;
 
 	double earning = 200 + commission;
 
-	System.out.println("Total Sales is" + totalAmountSales);
+	System.out.println("Total Sales is" + itemsValue);
 
 	System.out.println("Total commission is " + commission);
 

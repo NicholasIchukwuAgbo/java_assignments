@@ -15,10 +15,7 @@ public class SquareOfInteger{
 	num = userInput.nextInt();
 
 	square = square + num * 2;
+		System.out.println("The Square is: " + square);
+	 }
+}
 
-	}
-       System.out.println("The Square is: " + square);
-      }
-
-
-   }

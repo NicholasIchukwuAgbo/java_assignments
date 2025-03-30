@@ -1,7 +1,8 @@
  public class IfElse3{
 
 	public static void main(String[] args){
-
+    int y = 8;
+	int x = 5;
  	if (y == 8){
 
 	  if (x == 5){
